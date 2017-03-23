@@ -1,0 +1,19 @@
+[ignore]
+# styled-components issues
+.*/node_modules/styled-components/dangerfile.js
+.*/node_modules/styled-components/lib/models/InlineStyle.js.flow
+.*/node_modules/styled-components/lib/models/StyleSheet.js.flow
+.*/node_modules/styled-components/lib/native/index.js.flow
+.*/node_modules/styled-components/src
+
+[include]
+
+[libs]
+
+[options]
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
+suppress_comment= \\(.\\|\n\\)*\\$FlowIssue
+suppress_comment= \\(.\\|\n\\)*\\$FlowIgnore

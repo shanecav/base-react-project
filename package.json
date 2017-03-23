@@ -1,0 +1,44 @@
+{
+  "name": "base-react-project",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Shane Cavaliere <shane@shanecavaliere.com>",
+  "license": "UNLICENSED",
+  "main": "src/index.js",
+  "scripts": {
+    "setup:dev": "yarn install && npm run build:dll:dev",
+    "start": "webpack-dashboard -- node ./tools/build/static-server.js",
+    "clean": "rimraf dist && rimraf dev && rimraf .happypack && rimraf dll",
+    "build:dll:dev": "webpack --config ./tools/build/webpack.dll.dev.js",
+    "build:dll:prod": "cross-env NODE_ENV=production webpack --config ./tools/build/webpack.dll.prod.js",
+    "build:app:prod": "cross-env NODE_ENV=production webpack --config ./tools/build/webpack.config.prod.js",
+    "build": "yarn install && npm run build:dll:prod && npm run build:app:prod",
+    "build:local": "npm run clean && npm run build:dll:prod && npm run build:app:prod",
+    "test": "jest --notify",
+    "test:watch": "jest --notify --watch"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.2.2",
+    "babel-preset-react": "^6.23.0",
+    "connect-history-api-fallback": "^1.3.0",
+    "express": "^4.15.2",
+    "flow-bin": "^0.42.0",
+    "happypack": "^3.0.3",
+    "html-webpack-plugin": "^2.28.0",
+    "jest": "^19.0.2",
+    "prettier": "^0.22.0",
+    "react-hot-loader": "next",
+    "rimraf": "^2.6.1",
+    "webpack": "^2.3.0",
+    "webpack-dashboard": "^0.3.0",
+    "webpack-dev-middleware": "^1.10.1",
+    "webpack-hot-middleware": "^2.17.1",
+    "webpack-merge": "^4.1.0"
+  }
+}
