@@ -14,7 +14,8 @@
   ],
   "parser": "babel-eslint",
   "env": {
-    "browser": true
+    "browser": true,
+    "commonjs": true
   },
   "rules": {
     "prettier/prettier": "error"
