@@ -1,18 +1,22 @@
 [ignore]
-# styled-components issues
+# styled-components
 .*/node_modules/styled-components/dangerfile.js
-.*/node_modules/styled-components/lib/models/InlineStyle.js.flow
-.*/node_modules/styled-components/lib/models/StyleSheet.js.flow
-.*/node_modules/styled-components/lib/native/index.js.flow
 .*/node_modules/styled-components/src
 
 [include]
 
 [libs]
+# styled-components
+node_modules/styled-components/flow-typed/react-native.js
+node_modules/styled-components/flow-typed/glamor_vx.x.x.js
+node_modules/styled-components/flow-typed/lodash_v4.x.x.js
+node_modules/styled-components/flow-typed/inline-style-prefixer_vx.x.x.js
 
 [options]
 esproposal.class_static_fields=enable
 esproposal.class_instance_fields=enable
+
+unsafe.enable_getters_and_setters=true
 
 suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
 suppress_comment= \\(.\\|\n\\)*\\$FlowIssue
