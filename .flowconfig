@@ -2,6 +2,7 @@
 # styled-components
 .*/node_modules/styled-components/dangerfile.js
 .*/node_modules/styled-components/src
+.*/node_modules/styled-components/flow-typed
 
 [include]
 
