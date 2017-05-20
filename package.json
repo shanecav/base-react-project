@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "author": "Shane Cavaliere <shane@shanecavaliere.com>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "main": "src/index.js",
   "scripts": {
     "setup:dev": "yarn install && npm run build:dll:dev",
